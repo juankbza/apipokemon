@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pokemania/themes/app_themes.dart';
+
 
 class HomeScreen extends StatelessWidget {
    
@@ -8,7 +10,8 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-         child: Text('HomeScreen'),
+         child: Text('HomeScreen',style: TextStyle(color: AppThemes.mikuLightTheme.colorScheme.secondary),)
+         ,
       ),
     );
   }

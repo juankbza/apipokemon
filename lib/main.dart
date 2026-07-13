@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       
       routes: AppRoutes.routes,
       
-      theme: AppThemes.light(),
+      theme: AppThemes.mikuLightTheme,
       
 
 

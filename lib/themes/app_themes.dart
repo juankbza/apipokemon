@@ -1,36 +1,42 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AppThemes {
-
-  static const primario = Color(0xFF272555);
-  static const secundario1 = Color(0xFFdc0b0a);
-  static const secundario2 = Color(0xFFFFFFFF);
-  static const secundario3 = Color(0xFF914a72);
-
-
-
-  static ThemeData light() {
-
-    final colorScheme = ColorScheme.fromSeed(
-      
-      seedColor: const Color(0xFF272555),
+  static ThemeData mikuLightTheme = ThemeData(
+    brightness: Brightness.light,
+    useMaterial3: true,
+    scaffoldBackgroundColor: const Color(0xFFBEC8D1),
+    colorScheme: const ColorScheme(
       brightness: Brightness.light,
-
-      
-      );
-
-      return ThemeData(
-
-        colorScheme: colorScheme,
-
-        fontFamily: GoogleFonts.montserrat().fontFamily,
-        textTheme: GoogleFonts.montserratTextTheme(),
-
-      );
-
-
-
-  }
+      primary: Color(0xFF272555),
+      onPrimary: Colors.white,
+      secondary: Color(0xFFdc0b0a),
+      onSecondary: Colors.white,
+      tertiary: Color(0xFFFFFFFF),
+      onTertiary: Color(0xFF373B3E),
+      surface: Colors.white,
+      onSurface: Color(0xFF373B3E),
+      error: Colors.red,
+      onError: Colors.white,
+    ),
+  );
+ static ThemeData tetoDarkTheme = ThemeData(
+  brightness: Brightness.dark,
+  useMaterial3: true,
+  // Fondo Rojo Kasane solicitado
+  scaffoldBackgroundColor: const Color(0xFFFF0045), 
+  colorScheme: const ColorScheme(
+    brightness: Brightness.dark,
+    primary: Color(0xFF06053B), 
+    onPrimary: Color(0xFFEDA7BA), 
+    secondary: Color(0xFFD924D5), 
+    onSecondary: Color(0xFF06053B),
+    tertiary: Color(0xFFEDA7BA),
+    onTertiary: Color(0xFF06053B),
+    surface: Color(0xFF3F4750), 
+    onSurface: Color(0xFFEDA7BA), 
+    error: Color(0xFFD924D5),
+    onError: Color(0xFF06053B),
+  ),
+);
 
 }
