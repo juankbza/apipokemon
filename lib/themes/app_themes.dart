@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AppThemes {
+  static const Color mauve = Color(0xFF901467);
+
   static ThemeData mikuLightTheme = ThemeData(
     brightness: Brightness.light,
     useMaterial3: true,
@@ -19,24 +21,23 @@ class AppThemes {
       onError: Colors.white,
     ),
   );
- static ThemeData tetoDarkTheme = ThemeData(
-  brightness: Brightness.dark,
-  useMaterial3: true,
-  // Fondo Rojo Kasane solicitado
-  scaffoldBackgroundColor: const Color(0xFFFF0045), 
-  colorScheme: const ColorScheme(
-    brightness: Brightness.dark,
-    primary: Color(0xFF06053B), 
-    onPrimary: Color(0xFFEDA7BA), 
-    secondary: Color(0xFFD924D5), 
-    onSecondary: Color(0xFF06053B),
-    tertiary: Color(0xFFEDA7BA),
-    onTertiary: Color(0xFF06053B),
-    surface: Color(0xFF3F4750), 
-    onSurface: Color(0xFFEDA7BA), 
-    error: Color(0xFFD924D5),
-    onError: Color(0xFF06053B),
-  ),
-);
 
+  static ThemeData tetoDarkTheme = ThemeData(
+    brightness: Brightness.dark,
+    useMaterial3: true,
+    scaffoldBackgroundColor: const Color(0xFFFF0045), 
+    colorScheme: const ColorScheme(
+      brightness: Brightness.dark,
+      primary: Color(0xFF06053B), 
+      onPrimary: Color(0xFFEDA7BA), 
+      secondary: Color(0xFFD924D5), 
+      onSecondary: Color(0xFF06053B),
+      tertiary: Color(0xFFEDA7BA),
+      onTertiary: Color(0xFF06053B),
+      surface: Color(0xFF3F4750), 
+      onSurface: Color(0xFFEDA7BA), 
+      error: Color(0xFFD924D5),
+      onError: Color(0xFF06053B),
+    ),
+  );
 }
