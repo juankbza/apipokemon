@@ -9,6 +9,7 @@ class AppRoutes {
 
     '/info' : (BuildContext context) => InfoScreen(),
     '/home' : (BuildContext context) => HomeScreen(),
+    'guia' : (BuildContext context) => GuiaScreen(),
     
 
 

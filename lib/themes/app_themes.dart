@@ -12,7 +12,7 @@ class AppThemes {
       primary: Color(0xFF272555),
       onPrimary: Colors.white,
       secondary: Color(0xFFdc0b0a),
-      onSecondary: Colors.white,
+      onSecondary: Color(0xFF914a72),
       tertiary: Color(0xFFFFFFFF),
       onTertiary: Color(0xFF373B3E),
       surface: Colors.white,
