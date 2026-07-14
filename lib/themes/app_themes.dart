@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AppThemes {
+
+
   static ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
     useMaterial3: true,
@@ -19,10 +21,11 @@ class AppThemes {
       onError: Colors.white,
     ),
   );
+
+  
  static ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
   useMaterial3: true,
-  // Fondo Rojo Kasane solicitado
   scaffoldBackgroundColor: const Color(0xFFFF0045), 
   colorScheme: const ColorScheme(
     brightness: Brightness.dark,
@@ -38,5 +41,6 @@ class AppThemes {
     onError: Color(0xFF06053B),
   ),
 );
+
 
 }
