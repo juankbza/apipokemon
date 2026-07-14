@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppThemes {
-  static ThemeData mikuLightTheme = ThemeData(
+  static ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
     useMaterial3: true,
     scaffoldBackgroundColor: const Color(0xFFBEC8D1),
@@ -19,7 +19,7 @@ class AppThemes {
       onError: Colors.white,
     ),
   );
- static ThemeData tetoDarkTheme = ThemeData(
+ static ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
   useMaterial3: true,
   // Fondo Rojo Kasane solicitado

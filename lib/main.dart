@@ -12,13 +12,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
 
-      title: 'Pokeex App',
+      title: 'Pokedex App',
 
       initialRoute:  AppRoutes.initialRoute,
       
       routes: AppRoutes.routes,
       
-      theme: AppThemes.mikuLightTheme,
+      theme: AppThemes.lightTheme,
       
 
 
