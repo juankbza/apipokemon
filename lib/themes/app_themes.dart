@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 
 class AppThemes {
 
@@ -13,13 +15,17 @@ class AppThemes {
       onPrimary: Colors.white,
       secondary: Color(0xFFdc0b0a),
       onSecondary: Color(0xFF914a72),
-      tertiary: Color(0xFFFFFFFF),
-      onTertiary: Color(0xFF373B3E),
+      tertiary: Color.fromARGB(255, 0, 0, 0),
+      onTertiary: Color.fromARGB(255, 150, 157, 162),
       surface: Colors.white,
-      onSurface: Color(0xFF373B3E),
+      onSurface: Color.fromARGB(255, 170, 177, 182),
       error: Colors.red,
       onError: Colors.white,
+      
+
     ),
+      fontFamily: GoogleFonts.pixelifySans().fontFamily,
+      textTheme: GoogleFonts.pixelifySansTextTheme(),
   );
 
   
