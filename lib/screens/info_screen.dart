@@ -35,7 +35,6 @@ class InfoScreen extends StatelessWidget {
                   child: Text(
                     'INFO',
                     style: TextStyle(
-                      fontFamily: AppThemes.lightTheme.textTheme.bodyLarge?.fontFamily,
                       color: onPrimaryColor,
                       fontSize: 40,
                       fontWeight: FontWeight.bold,
@@ -55,7 +54,6 @@ class InfoScreen extends StatelessWidget {
                   child: Text(
                     'POKEDEX',
                     style: TextStyle(
-                      fontFamily: AppThemes.lightTheme.textTheme.bodyLarge?.fontFamily,
                       color: tertiaryColor,
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -74,7 +72,6 @@ class InfoScreen extends StatelessWidget {
                   child: Text(
                     'DESARROLLADORES',
                     style: TextStyle(
-                      fontFamily: AppThemes.lightTheme.textTheme.bodyLarge?.fontFamily,
                       color: onPrimaryColor,
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
@@ -177,7 +174,6 @@ class InfoScreen extends StatelessWidget {
             child: Text(
               description,
               style: TextStyle(
-                fontFamily: AppThemes.lightTheme.textTheme.bodyLarge?.fontFamily,
                 color: AppThemes.lightTheme.colorScheme.tertiary,
                 fontSize: 12,
                 fontWeight: FontWeight.bold,
@@ -207,7 +203,6 @@ class InfoScreen extends StatelessWidget {
                 color: AppThemes.lightTheme.colorScheme.onPrimary,
                 fontSize: 10,
                 fontWeight: FontWeight.bold,
-                fontFamily: AppThemes.lightTheme.textTheme.bodyLarge?.fontFamily,
               ),
             )
           : null,
