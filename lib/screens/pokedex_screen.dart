@@ -39,21 +39,48 @@ class PokedexScreen extends StatelessWidget {
 
                     children: [
 
-                      Container(
+                      Row(
 
-                        width: double.infinity,
-                        height: 50,
-                        //color: AppThemes.lightTheme.colorScheme.onPrimary,
-                        margin: EdgeInsets.only(top:15,left: 20),
-                        child: Text('CHARIZARD',
+                        children: [
+                          
+                          Container(
                         
-                        style: TextStyle(
-
-                          color: AppThemes.lightTheme.colorScheme.onPrimary,
-                          fontSize: 40,
-
+                          width: 230,
+                          height: 50,
+                          //color: AppThemes.lightTheme.colorScheme.onPrimary,
+                          margin: EdgeInsets.only(top:15,left: 20),
+                          child: Text('CHARIZARD',
+                          
+                          style: TextStyle(
+                        
+                            color: AppThemes.lightTheme.colorScheme.onPrimary,
+                            fontSize: 40,
+                        
+                          ),
+                          ),
                         ),
-                        ),
+
+                        Container(
+
+                          width: 60,
+                          height: 50,
+                          //color: AppThemes.lightTheme.colorScheme.onPrimary,
+                          margin: EdgeInsets.only(top: 15 ,left: 30),
+                          decoration: BoxDecoration(
+
+                            borderRadius: BorderRadius.circular(100),
+
+                            image: DecorationImage(
+                              
+                              image: AssetImage('assets/images/fondorpueba.png'),
+                              fit: BoxFit.cover,
+                              
+                              ),
+                              
+                              
+                          ),
+                        )
+                        ]
                       )
                     ],
                   )
