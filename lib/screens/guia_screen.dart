@@ -156,32 +156,66 @@ class GuiaScreen extends StatelessWidget {
                   
                   
                   ),
-                ),]
+                ),
+                ]
               )
           
             ),
             Container(
           
               width: double.infinity,
-              height: 200,
-              color: AppThemes.lightTheme.colorScheme.secondary,
+              height: 270,
+              //color: AppThemes.lightTheme.colorScheme.secondary,
               margin: const EdgeInsets.only(top: 10, left: 30, right: 30),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                image: const DecorationImage(
+                  image: AssetImage('assets/images/pelea.png'),
+                  fit: BoxFit.cover,
+                ),
+              ),
           
             ),
           
             Container(
           
               width: double.infinity,
-              height: 40,
+              height: 55,
               color: AppThemes.lightTheme.colorScheme.onPrimary,
-              margin: const EdgeInsets.only(top: 10, left: 30, right: 30),
+              margin: EdgeInsets.only(top: 10, left: 30, right: 30,bottom: 10),
+              child: Stack(
           
-            ),
+                children: [
+                  
+                  Container(
+          
+                  width: double.infinity,
+                  height: 55,
+                  margin: EdgeInsets.only(top: 7, left: 15, right: 15, bottom: 5),
+          
+                  child: Text(
+                  
+                    'Continua aprendiendo sobre los Pokémon y sus habilidades.',
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                  
+                      color: AppThemes.lightTheme.colorScheme.tertiary,
+                      fontSize: 15,
+                      //fontWeight: GoogleFonts.pixelifySans().fontWeight,
+                      
+                    ),
+                  
+                  
+                  ),
+                )
             ]
           ),
+            ),
+            ]
         ),
       ),
-
+      )
+      
 
     );
   }
