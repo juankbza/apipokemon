@@ -31,6 +31,9 @@ class HomeScreen extends StatelessWidget {
             Column(
 
               mainAxisAlignment: MainAxisAlignment.center,
+              
+              
+
 
               children: [
 
@@ -39,6 +42,7 @@ class HomeScreen extends StatelessWidget {
                   width: 80,
                   height: 600,
                   color: AppThemes.lightTheme.colorScheme.secondary,
+                  margin: EdgeInsetsDirectional.only(top: 120, start: 300, end: 10, bottom: 10),
                 )
               ],
             )
