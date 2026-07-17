@@ -17,40 +17,14 @@ class HomeScreen extends StatelessWidget {
 
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/pokemones.png'),
+            image: AssetImage('assets/images/prueba2.png'),
             fit: BoxFit.cover,
           
           ),
         
         ),
 
-        child: Stack(
-
-          children: [
-
-            Column(
-
-              mainAxisAlignment: MainAxisAlignment.center,
-              
-              
-
-
-              children: [
-
-                Container(
-
-                  width: 80,
-                  height: 600,
-                  color: AppThemes.lightTheme.colorScheme.secondary,
-                  margin: EdgeInsetsDirectional.only(top: 120, start: 300, end: 10, bottom: 10),
-                )
-              ],
-            )
-          ]
-        )
-
-
-
+        
       )
     );
   }
