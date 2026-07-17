@@ -52,7 +52,7 @@ class InfoScreen extends StatelessWidget {
                     vertical: 20,
                   ),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
+                    
                     image: const DecorationImage(
                       image: AssetImage(
                         'assets/images/profesor_oak.png',
@@ -138,7 +138,7 @@ class InfoScreen extends StatelessWidget {
                                     height: 260,
                                     margin: const EdgeInsets.only(right: 15),
                                     decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5),
+
                                       image: const DecorationImage(
                                         image: AssetImage('assets/images/pokemones.png'),
                                         fit: BoxFit.cover,
@@ -204,7 +204,7 @@ class InfoScreen extends StatelessWidget {
                               padding: const EdgeInsets.all(15),
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                borderRadius: BorderRadius.circular(10),
+
                               ),
                               child: Text(
                                 'FUTURO ING SISTEMAS CON INTENCION DE MEJORAR CADA DIA',
@@ -236,7 +236,7 @@ class InfoScreen extends StatelessWidget {
                                     height: 260,
                                     margin: const EdgeInsets.only(right: 15),
                                     decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(5),
+
                                       image: const DecorationImage(
                                         image: AssetImage('assets/images/poke1.png'),
                                         fit: BoxFit.cover,
@@ -302,7 +302,7 @@ class InfoScreen extends StatelessWidget {
                               padding: const EdgeInsets.all(15),
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                borderRadius: BorderRadius.circular(10),
+
                               ),
                               child: Text(
                                 'APASIONADO POR FLUTTER Y EL DESARROLLO MÓVIL',
