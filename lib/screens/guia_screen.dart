@@ -39,7 +39,13 @@ class GuiaScreen extends StatelessWidget {
           
                   width: double.infinity,
                   height: 55,
-                  margin: EdgeInsets.only(top: 7, left: 15, right: 15, bottom: 10),
+                  margin: EdgeInsets.only(
+                    top: 7,
+                    left: 15,
+                    right: 15,
+                    bottom: 10
+                    
+                  ),
           
                   child: Text(
                   

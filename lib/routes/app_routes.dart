@@ -3,7 +3,7 @@ import 'package:pokemania/screens/screens.dart';
 
 class AppRoutes {
 
-  static String initialRoute = "/guia";
+  static String initialRoute = "/info";
 
   static Map<String, Widget Function(BuildContext)> routes = {
 

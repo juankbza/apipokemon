@@ -22,27 +22,50 @@ class InfoScreen extends StatelessWidget {
               children: [
                 
                 Container(
+            
+              width: double.infinity,
+              height: 80,
+              margin: const EdgeInsets.only(top: 25, left: 15, right: 15),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: AppThemes.lightTheme.colorScheme.secondary,
+              ),
+          
+              child: Stack(
+          
+                children: [
+                  
+                  Container(
+          
                   width: double.infinity,
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 15,
-                    horizontal: 20,
+                  height: 55,
+                  margin: EdgeInsets.only(
+                    top: 7,
+                    left: 15,
+                    right: 15,
+                    bottom: 10
+                    
                   ),
-                  decoration: BoxDecoration(
-                    color: secondaryColor,
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(10),
-                      topRight: Radius.circular(10),
-                    ),
-                  ),
+          
                   child: Text(
-                    'INFO',
+                  
+                    'Información ',
+                    textAlign: TextAlign.left,
                     style: TextStyle(
-                      color: onPrimaryColor,
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold,
+                  
+                      color: AppThemes.lightTheme.colorScheme.onPrimary,
+                      fontSize: 45,
+                      fontWeight: FontWeight.bold
+                      
                     ),
+                  
+                  
                   ),
-                ),
+                ),]
+              )
+            
+            ),
+          
 
                 Container(
                   width: double.infinity,
