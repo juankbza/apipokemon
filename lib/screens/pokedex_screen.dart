@@ -43,23 +43,24 @@ class PokedexScreen extends StatelessWidget {
                         Row(
           
                           children: [
+                            Expanded(
+                              child: Container(
                             
-                            Container(
-                          
-                            width: 230,
-                            height: 50,
-                            //color: AppThemes.lightTheme.colorScheme.onPrimary,
-                            margin: EdgeInsets.only(top:15,left: 20),
-                            child: Text('CHARIZARD',
+                                width: 230,
+                                height: 50,
+                                //color: AppThemes.lightTheme.colorScheme.onPrimary,
+                                margin: EdgeInsets.only(top:15,left: 20),
+                              child: Text('CHARIZARD',
+                                
+                                style: TextStyle(
+                              
+                                  color: AppThemes.lightTheme.colorScheme.onPrimary,
+                                  fontSize: 40,
                             
-                            style: TextStyle(
-                          
-                              color: AppThemes.lightTheme.colorScheme.onPrimary,
-                              fontSize: 40,
-                          
+                                ),
+                              ),
+                              ),
                             ),
-                            ),
-                          ),
           
                           Container(
           
@@ -91,25 +92,26 @@ class PokedexScreen extends StatelessWidget {
                   Row(
                     
                     children: [
-          
-                      Container(
-                        
-                        width: 250,
-                        height: 500,
-                        //color: AppThemes.lightTheme.colorScheme.secondary,
-                        margin: const EdgeInsets.only(top: 20,left: 20,right: 0),
-          
-                        decoration: BoxDecoration(
-          
-                          image: DecorationImage(
-                            
-                            image: AssetImage('assets/images/charizard.png'),
-                            fit: BoxFit.cover,
+                      Expanded(
+                        child: Container(
+                          
+                          width: 250,
+                          height: 500,
+
+                          margin: const EdgeInsets.only(top: 20,left: 20,right: 0),
+            
+                          decoration: BoxDecoration(
+            
+                            image: DecorationImage(
+                              
+                              image: AssetImage('assets/images/charizard.png'),
+                              fit: BoxFit.cover,
+                          ),
+                          
                         ),
-                        
+                        ),
                       ),
-                      ),
-          
+
                       Column(
                         children: [
                           
@@ -166,7 +168,7 @@ class PokedexScreen extends StatelessWidget {
           
                           width: 100,
                           height: 70,
-                          //color: AppThemes.lightTheme.colorScheme.onSecondary,
+
                           margin: const EdgeInsets.only(top: 10,left: 20,right: 20),
                           decoration: BoxDecoration(
           
@@ -216,17 +218,19 @@ class PokedexScreen extends StatelessWidget {
                   ),
           
                   Container(
-          
+                    decoration: BoxDecoration(
+                          color: const Color.fromRGBO(255, 255, 255, 0.95),
+                          border: Border.all(color: Colors.black, width: 4),
+                    ),
                     width: double.infinity,
                     height: 220,
-                    color: AppThemes.lightTheme.colorScheme.onPrimary,
                     margin: EdgeInsets.only(top: 20,left: 20, right: 20),
                     child: Stack(
           
                       children: [
                         
                         Container(
-          
+                        
                         margin: EdgeInsets.only(top:10,left: 15,right: 15),
                         child: Text(
                           
@@ -237,7 +241,8 @@ class PokedexScreen extends StatelessWidget {
                           ),
                         
                         ),
-                      ),]
+                      ),
+                      ],
                     ),
           
           

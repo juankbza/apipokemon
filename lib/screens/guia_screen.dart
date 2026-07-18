@@ -25,7 +25,6 @@ class GuiaScreen extends StatelessWidget {
             
               width: double.infinity,
               height: 80,
-              //color: AppThemes.lightTheme.colorScheme.secondary,
               margin: const EdgeInsets.only(top: 25, left: 15, right: 15),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
@@ -80,7 +79,10 @@ class GuiaScreen extends StatelessWidget {
           
               width: double.infinity,
               height: 60,
-              color: AppThemes.lightTheme.colorScheme.onPrimary,
+              decoration: BoxDecoration(
+                color: const Color.fromRGBO(255, 255, 255, 0.95),
+                border: Border.all(color: Colors.black, width: 4),
+              ),
               margin: const EdgeInsets.only(top: 10, left: 30, right: 30),
               child: Stack(
           
@@ -130,7 +132,10 @@ class GuiaScreen extends StatelessWidget {
           
               width: double.infinity,
               height: 55,
-              color: AppThemes.lightTheme.colorScheme.onPrimary,
+              decoration: BoxDecoration(
+                color: const Color.fromRGBO(255, 255, 255, 0.95),
+                border: Border.all(color: Colors.black, width: 4),
+              ),
               margin: const EdgeInsets.only(top: 10, left: 30, right: 30),
               child: Stack(
           
@@ -181,7 +186,10 @@ class GuiaScreen extends StatelessWidget {
           
               width: double.infinity,
               height: 55,
-              color: AppThemes.lightTheme.colorScheme.onPrimary,
+              decoration: BoxDecoration(
+                color: const Color.fromRGBO(255, 255, 255, 0.95),
+                border: Border.all(color: Colors.black, width: 4),
+              ),
               margin: EdgeInsets.only(top: 10, left: 30, right: 30,bottom: 10),
               child: Stack(
           
