@@ -97,7 +97,7 @@ class PokedexScreen extends StatelessWidget {
                           
                           width: 250,
                           height: 500,
-                          //color: AppThemes.lightTheme.colorScheme.secondary,
+
                           margin: const EdgeInsets.only(top: 20,left: 20,right: 0),
             
                           decoration: BoxDecoration(
@@ -111,7 +111,7 @@ class PokedexScreen extends StatelessWidget {
                         ),
                         ),
                       ),
-                      
+
                       Column(
                         children: [
                           
@@ -168,7 +168,7 @@ class PokedexScreen extends StatelessWidget {
           
                           width: 100,
                           height: 70,
-                          //color: AppThemes.lightTheme.colorScheme.onSecondary,
+
                           margin: const EdgeInsets.only(top: 10,left: 20,right: 20),
                           decoration: BoxDecoration(
           
@@ -218,17 +218,19 @@ class PokedexScreen extends StatelessWidget {
                   ),
           
                   Container(
-          
+                    decoration: BoxDecoration(
+                          color: const Color.fromRGBO(255, 255, 255, 0.95),
+                          border: Border.all(color: Colors.black, width: 4),
+                    ),
                     width: double.infinity,
                     height: 220,
-                    color: AppThemes.lightTheme.colorScheme.onPrimary,
                     margin: EdgeInsets.only(top: 20,left: 20, right: 20),
                     child: Stack(
           
                       children: [
                         
                         Container(
-          
+                        
                         margin: EdgeInsets.only(top:10,left: 15,right: 15),
                         child: Text(
                           
@@ -239,7 +241,8 @@ class PokedexScreen extends StatelessWidget {
                           ),
                         
                         ),
-                      ),]
+                      ),
+                      ],
                     ),
           
           

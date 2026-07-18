@@ -3,7 +3,7 @@ import 'package:pokemania/screens/screens.dart';
 
 class AppRoutes {
 
-  static String initialRoute = "/pokedex";
+  static String initialRoute = "/guia";
 
   static Map<String, Widget Function(BuildContext)> routes = {
 
@@ -11,6 +11,7 @@ class AppRoutes {
     '/home' : (BuildContext context) => HomeScreen(),
     '/guia' : (BuildContext context) => GuiaScreen(),
     '/pokedex' : (BuildContext context) => PokedexScreen(),
+    '/story' : (BuildContext context) => StoryScreen(),
     
 
 
