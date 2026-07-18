@@ -43,23 +43,24 @@ class PokedexScreen extends StatelessWidget {
                         Row(
           
                           children: [
+                            Expanded(
+                              child: Container(
                             
-                            Container(
-                          
-                            width: 230,
-                            height: 50,
-                            //color: AppThemes.lightTheme.colorScheme.onPrimary,
-                            margin: EdgeInsets.only(top:15,left: 20),
-                            child: Text('CHARIZARD',
+                                width: 230,
+                                height: 50,
+                                //color: AppThemes.lightTheme.colorScheme.onPrimary,
+                                margin: EdgeInsets.only(top:15,left: 20),
+                              child: Text('CHARIZARD',
+                                
+                                style: TextStyle(
+                              
+                                  color: AppThemes.lightTheme.colorScheme.onPrimary,
+                                  fontSize: 40,
                             
-                            style: TextStyle(
-                          
-                              color: AppThemes.lightTheme.colorScheme.onPrimary,
-                              fontSize: 40,
-                          
+                                ),
+                              ),
+                              ),
                             ),
-                            ),
-                          ),
           
                           Container(
           
@@ -91,25 +92,26 @@ class PokedexScreen extends StatelessWidget {
                   Row(
                     
                     children: [
-          
-                      Container(
-                        
-                        width: 250,
-                        height: 500,
-                        //color: AppThemes.lightTheme.colorScheme.secondary,
-                        margin: const EdgeInsets.only(top: 20,left: 20,right: 0),
-          
-                        decoration: BoxDecoration(
-          
-                          image: DecorationImage(
-                            
-                            image: AssetImage('assets/images/charizard.png'),
-                            fit: BoxFit.cover,
+                      Expanded(
+                        child: Container(
+                          
+                          width: 250,
+                          height: 500,
+                          //color: AppThemes.lightTheme.colorScheme.secondary,
+                          margin: const EdgeInsets.only(top: 20,left: 20,right: 0),
+            
+                          decoration: BoxDecoration(
+            
+                            image: DecorationImage(
+                              
+                              image: AssetImage('assets/images/charizard.png'),
+                              fit: BoxFit.cover,
+                          ),
+                          
                         ),
-                        
+                        ),
                       ),
-                      ),
-          
+                      
                       Column(
                         children: [
                           
