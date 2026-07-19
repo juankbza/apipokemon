@@ -9,7 +9,7 @@ class PokeProvider extends ChangeNotifier {
   final String _baseUrl = 'pokeapi.co';
   final String _languaje = 'es-ES';
 
-  dynamic pokemonData = [];
+  Map<String,dynamic> pokemonDatas = {};
 
   PokeProvider(){
 
@@ -37,16 +37,14 @@ class PokeProvider extends ChangeNotifier {
 
     print('prueba pokemon data');
 
-    final jsonData = await _getJsonData('/api/v2/pokemon/25/');
+    final jsonData = await _getJsonData('/api/v2/pokemon/5');
     final pokemonDataResponse = Welcome.fromJson(jsonData);
-    pokemonData = pokemonDataResponse.id ;
+    pokemonDatas = pokemonDataResponse.sprites ;
     print(pokemonDataResponse.id);
     print(pokemonDataResponse.name);  
     print(pokemonDataResponse.abilities);
     print(pokemonDataResponse.types);
-    print(pokemonDataResponse.flavorText);
     print(pokemonDataResponse.sprites);
-
 
     notifyListeners();
 

@@ -4,27 +4,27 @@ import 'dart:convert';
 class Welcome {
 
     
-    String? name;
+    dynamic name;
     dynamic types;
     String? region;
-    int height;
+    dynamic height;
     dynamic abilities;
     dynamic id;
-    dynamic flavorText;
     dynamic sprites;
+
   
 
 
     Welcome({
 
         this.name,
-        required this.types,
+        this.types,
         this.region,
-        required this.height,
-        required this.id,
-        required this.abilities,
-        required this.flavorText,
+        this.height,
+        this.id,
+        this.abilities,
         this.sprites,
+
         
 
         });
@@ -39,8 +39,8 @@ class Welcome {
       height: json["height"],
       id: json["id"],
       abilities: json["abilities"],
-      flavorText: json["flavor_text"],
       sprites: json["sprites"],
+
     
       
 

@@ -74,7 +74,7 @@ class PokedexScreen extends StatelessWidget {
           
                               image: DecorationImage(
                                 
-                                image: AssetImage('assets/images/fondorpueba.png'),
+                                image: AssetImage('assets/fondorpueba.png'),
                                 fit: BoxFit.cover,
                                 
                                 ),
@@ -104,7 +104,7 @@ class PokedexScreen extends StatelessWidget {
             
                             image: DecorationImage(
                               
-                              image: AssetImage('assets/images/charizard.png'),
+                              image: AssetImage('assets/charizard.png'),
                               fit: BoxFit.cover,
                           ),
                           

@@ -12,6 +12,23 @@ class InfoScreen extends StatelessWidget {
     final onPrimaryColor = AppThemes.lightTheme.colorScheme.onPrimary;
 
     return Scaffold(
+
+      appBar: AppBar(
+
+        backgroundColor: AppThemes.lightTheme.colorScheme.secondary,
+
+        title: Text(
+          
+          
+          'INFO',
+          style: TextStyle(
+
+            fontSize: 50,
+            color: AppThemes.lightTheme.colorScheme.onPrimary,
+          ),
+          
+          ),
+      ),
       backgroundColor: tertiaryColor,
       body: SafeArea(
         child: Container(
@@ -21,50 +38,7 @@ class InfoScreen extends StatelessWidget {
             child: Column(
               children: [
                 
-                Container(
-            
-              width: double.infinity,
-              height: 80,
-              margin: const EdgeInsets.only(top: 25, left: 15, right: 15),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: AppThemes.lightTheme.colorScheme.secondary,
-              ),
-          
-              child: Stack(
-          
-                children: [
-                  
-                  Container(
-          
-                  width: double.infinity,
-                  height: 55,
-                  margin: EdgeInsets.only(
-                    top: 7,
-                    left: 15,
-                    right: 15,
-                    bottom: 10
-                    
-                  ),
-          
-                  child: Text(
-                  
-                    'Información ',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                  
-                      color: AppThemes.lightTheme.colorScheme.onPrimary,
-                      fontSize: 45,
-                      fontWeight: FontWeight.bold
-                      
-                    ),
-                  
-                  
-                  ),
-                ),]
-              )
-            
-            ),
+
           
 
                 Container(
@@ -78,7 +52,7 @@ class InfoScreen extends StatelessWidget {
                     
                     image: const DecorationImage(
                       image: AssetImage(
-                        'assets/images/profesor_oak.png',
+                        'assets/profesor_oak.png',
                       ),
                       fit: BoxFit.cover,
                     ),
@@ -163,7 +137,7 @@ class InfoScreen extends StatelessWidget {
                                     decoration: BoxDecoration(
 
                                       image: const DecorationImage(
-                                        image: AssetImage('assets/images/pokemones.png'),
+                                        image: AssetImage('assets/pokemones.png'),
                                         fit: BoxFit.cover,
                                       ),
                                     ),
@@ -261,7 +235,7 @@ class InfoScreen extends StatelessWidget {
                                     decoration: BoxDecoration(
 
                                       image: const DecorationImage(
-                                        image: AssetImage('assets/images/poke1.png'),
+                                        image: AssetImage('assets/poke1.png'),
                                         fit: BoxFit.cover,
                                       ),
                                     ),

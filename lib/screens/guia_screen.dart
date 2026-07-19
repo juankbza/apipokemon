@@ -11,7 +11,22 @@ class GuiaScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       
+      appBar: AppBar(
 
+        title: Text(
+
+          
+          
+          'INSTRUCCIONES',
+          style: TextStyle(
+            
+            fontSize: 38,
+            color: AppThemes.lightTheme.colorScheme.onPrimary),
+            
+            
+            ),
+        backgroundColor: AppThemes.lightTheme.colorScheme.secondary,
+      ),
       backgroundColor: AppThemes.lightTheme.colorScheme.tertiary,
       body: Container(
 
@@ -21,50 +36,6 @@ class GuiaScreen extends StatelessWidget {
           
             children: [
               
-              Container(
-            
-              width: double.infinity,
-              height: 80,
-              margin: const EdgeInsets.only(top: 25, left: 15, right: 15),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: AppThemes.lightTheme.colorScheme.secondary,
-              ),
-          
-              child: Stack(
-          
-                children: [
-                  
-                  Container(
-          
-                  width: double.infinity,
-                  height: 55,
-                  margin: EdgeInsets.only(
-                    top: 7,
-                    left: 15,
-                    right: 15,
-                    bottom: 10
-                    
-                  ),
-          
-                  child: Text(
-                  
-                    'Instrucciones ',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                  
-                      color: AppThemes.lightTheme.colorScheme.onPrimary,
-                      fontSize: 45,
-                      fontWeight: FontWeight.bold
-                      
-                    ),
-                  
-                  
-                  ),
-                ),]
-              )
-            
-            ),
           
             Container(
           
@@ -75,7 +46,7 @@ class GuiaScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 image: const DecorationImage(
-                  image: AssetImage('assets/images/pokemones.png'),
+                  image: AssetImage('assets/pokemones.png'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -84,7 +55,7 @@ class GuiaScreen extends StatelessWidget {
             Container(
           
               width: double.infinity,
-              height: 60,
+              height: 70,
               decoration: BoxDecoration(
                 color: const Color.fromRGBO(255, 255, 255, 0.95),
                 border: Border.all(color: Colors.black, width: 4),
@@ -98,7 +69,7 @@ class GuiaScreen extends StatelessWidget {
           
                   width: double.infinity,
                   height: 55,
-                  margin: EdgeInsets.only(top: 5, left: 15, right: 15, bottom: 15),
+                  margin: EdgeInsets.only(top: 8, left: 15, right: 15, bottom: 15),
           
                   child: Text(
                   
@@ -127,7 +98,7 @@ class GuiaScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 image: const DecorationImage(
-                  image: AssetImage('assets/images/poke1.png'),
+                  image: AssetImage('assets/poke1.png'),
                   fit: BoxFit.cover,
                 ),
                 //color: AppThemes.lightTheme.colorScheme.secondary,
@@ -137,7 +108,7 @@ class GuiaScreen extends StatelessWidget {
             Container(
           
               width: double.infinity,
-              height: 55,
+              height: 65,
               decoration: BoxDecoration(
                 color: const Color.fromRGBO(255, 255, 255, 0.95),
                 border: Border.all(color: Colors.black, width: 4),
@@ -181,7 +152,7 @@ class GuiaScreen extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 image: const DecorationImage(
-                  image: AssetImage('assets/images/pelea.png'),
+                  image: AssetImage('assets/pelea.png'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -191,7 +162,7 @@ class GuiaScreen extends StatelessWidget {
             Container(
           
               width: double.infinity,
-              height: 55,
+              height: 65,
               decoration: BoxDecoration(
                 color: const Color.fromRGBO(255, 255, 255, 0.95),
                 border: Border.all(color: Colors.black, width: 4),
