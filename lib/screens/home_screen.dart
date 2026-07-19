@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pokemania/providers/poke_provider.dart';
 import 'package:pokemania/themes/app_themes.dart';
+import 'package:provider/provider.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -8,6 +10,9 @@ class HomeScreen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
+
+
+    final pokeProvider = Provider.of<PokeProvider>(context);
     return Scaffold(
       body: Container(
 
