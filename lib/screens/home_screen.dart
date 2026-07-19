@@ -47,9 +47,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
               
               width: 200,
-              height: 200,
+              height: 250,
               ///color: Colors.red,
-              margin: EdgeInsets.only(top: 350,left: 100, right: 30),
+              margin: EdgeInsets.only(top: 300,left: 110, right: 30),
               child: ListView.builder(
                 
                 itemCount: AppRoutes.customhome.length,

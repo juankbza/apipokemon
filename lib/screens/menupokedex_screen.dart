@@ -15,13 +15,10 @@ class MenupokedexScreen extends StatefulWidget {
 
 class _MenupokedexScreenState extends State<MenupokedexScreen> {
 
-  Map<String,dynamic> pokemonData = {};
+  List<Welcome> pokemonData = [];
 
   @override
   Widget build(BuildContext context) {
-
-  final pokeProvider = Provider.of<PokeProvider>(context);
-  final pokemonData = pokeProvider.pokemonDatas;
 
 
     
@@ -77,7 +74,7 @@ class _MenupokedexScreenState extends State<MenupokedexScreen> {
                         FadeInImage(
                         
                         placeholder: AssetImage('assets/charizard.png'), 
-                        image: NetworkImage(pokemonData[index].sprites)
+                        image: NetworkImage(pokemonData[index].sprites.toString())
                         
                         ),
         

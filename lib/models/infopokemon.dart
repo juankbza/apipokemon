@@ -29,6 +29,15 @@ class Welcome {
 
         });
 
+        String get fullSpritesPath {
+
+          if (sprites != null) {
+            return 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/9.png'; 
+          } 
+          return 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/5.png';
+
+        }
+
     factory Welcome.fromJson(String str) => Welcome.fromMap(json.decode(str));
 
   factory Welcome.fromMap(Map<String, dynamic> json) => Welcome(

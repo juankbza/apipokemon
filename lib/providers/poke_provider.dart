@@ -7,9 +7,9 @@ class PokeProvider extends ChangeNotifier {
 
   //final String _apiKey = ''; no tengo api key no se necesita al parecer
   final String _baseUrl = 'pokeapi.co';
-  final String _languaje = 'es-ES';
+  //final String _languaje = 'es-ES';
 
-  Map<String,dynamic> pokemonDatas = {};
+  List<Welcome> pokemonData = [];
 
   PokeProvider(){
 
@@ -19,11 +19,11 @@ class PokeProvider extends ChangeNotifier {
 
  Future<String> _getJsonData(String endpoint, [int? page = 1]) async{
 
-  var url = Uri.http(_baseUrl, endpoint, {
+  var url = Uri.https(_baseUrl, endpoint, {
 
    // 'api_key' : _apiKey,
-    'languaje' : _languaje,
-    'page' : '$page' 
+    //'languaje' : _languaje,
+    //'page' : '$page' 
 
   });
 
@@ -39,12 +39,12 @@ class PokeProvider extends ChangeNotifier {
 
     final jsonData = await _getJsonData('/api/v2/pokemon/5');
     final pokemonDataResponse = Welcome.fromJson(jsonData);
-    pokemonDatas = pokemonDataResponse.sprites ;
+    //pokemonData = pokemonDataResponse.sprites ;
     print(pokemonDataResponse.id);
     print(pokemonDataResponse.name);  
     print(pokemonDataResponse.abilities);
     print(pokemonDataResponse.types);
-    print(pokemonDataResponse.sprites);
+    
 
     notifyListeners();
 

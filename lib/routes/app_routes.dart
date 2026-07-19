@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokemania/screens/intro_screen.dart';
 import 'package:pokemania/screens/screens.dart';
 import 'package:pokemania/themes/app_themes.dart';
 import 'package:pokemania/widgets/widgets.dart';
@@ -6,7 +7,7 @@ import 'package:pokemania/widgets/widgets.dart';
 
 class AppRoutes {
 
-  static String initialRoute = "/home";
+  static String initialRoute = "/intro";
 
   static Map<String, Widget Function(BuildContext)> routes = {
 
@@ -16,6 +17,7 @@ class AppRoutes {
     '/pokedex' : (BuildContext context) => PokedexScreen(),
     '/story' : (BuildContext context) => StoryScreen(),
     '/menupokedex' : (BuildContext context) => MenupokedexScreen(),
+    '/intro' : (BuildContext Context) => IntroScreen()
     
 
 
@@ -23,9 +25,9 @@ class AppRoutes {
 
   static  final customhome = <CustomCardHome>[ 
 
-    CustomCardHome(title:'POKEDEX', color:AppThemes.lightTheme.colorScheme.onSecondary, route: '/menupokedex'),
-    CustomCardHome(title:'INSTRUCCIONES', color:AppThemes.lightTheme.colorScheme.onSecondary, route: '/guia'),
-    CustomCardHome(title:'DESARROLLADORES', color:AppThemes.lightTheme.colorScheme.onSecondary, route: '/info'),
+    CustomCardHome(title:'POKEDEX', color:AppThemes.lightTheme.colorScheme.secondary, route: '/menupokedex'),
+    CustomCardHome(title:'INSTRUCCIONES', color:AppThemes.lightTheme.colorScheme.secondary, route: '/guia'),
+    CustomCardHome(title:'DESARROLLADORES', color:AppThemes.lightTheme.colorScheme.secondary, route: '/info'),
 
 
 

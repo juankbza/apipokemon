@@ -177,7 +177,7 @@ class InfoScreen extends StatelessWidget {
                                         color: const Color(0xFF905A7E),
                                         borderRadius: BorderRadius.circular(8),
                                       ),
-                                      child: Text('SARAMAMBICHE', textAlign: TextAlign.center, style: TextStyle(color: onPrimaryColor, fontSize: 10, fontWeight: FontWeight.bold)),
+                                      child: Text('PROGRAMADOR', textAlign: TextAlign.center, style: TextStyle(color: onPrimaryColor, fontSize: 10, fontWeight: FontWeight.bold)),
                                     ),
                                     Container(
                                       width: 120,
@@ -188,7 +188,7 @@ class InfoScreen extends StatelessWidget {
                                         color: const Color(0xFF905A7E),
                                         borderRadius: BorderRadius.circular(8),
                                       ),
-                                      child: Text('TRAFICANTE', textAlign: TextAlign.center, style: TextStyle(color: onPrimaryColor, fontSize: 10, fontWeight: FontWeight.bold)),
+                                      child: Text('QUIMICO', textAlign: TextAlign.center, style: TextStyle(color: onPrimaryColor, fontSize: 10, fontWeight: FontWeight.bold)),
                                     ),
                                   ],
                                 ),
@@ -204,7 +204,7 @@ class InfoScreen extends StatelessWidget {
 
                               ),
                               child: Text(
-                                'FUTURO ING SISTEMAS CON INTENCION DE MEJORAR CADA DIA',
+                                'FUTURO ING SISTEMAS CON INTENCION DE MEJORAR CADA DIA Y GANAS DE SEGUIR APRENDIENDO NUEVAS COSAS REFERENTES A LA CIENCIA',
                                 style: TextStyle(
                                   color: tertiaryColor,
                                   fontSize: 12,
@@ -275,7 +275,7 @@ class InfoScreen extends StatelessWidget {
                                         color: const Color(0xFF905A7E),
                                         borderRadius: BorderRadius.circular(8),
                                       ),
-                                      child: Text('TANGAMANDAPIO', textAlign: TextAlign.center, style: TextStyle(color: onPrimaryColor, fontSize: 10, fontWeight: FontWeight.bold)),
+                                      child: Text('MUSICO', textAlign: TextAlign.center, style: TextStyle(color: onPrimaryColor, fontSize: 10, fontWeight: FontWeight.bold)),
                                     ),
                                     Container(
                                       width: 120,
