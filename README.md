@@ -6,8 +6,8 @@
 
 ## 🚀 Enlaces de Interés
 
-* 📦 **Descargar la APK (Instalador para Android):** [¡Descarga el APK aquí!](https://github.com/TU_USUARIO/TU_REPOSITORIO/releases/download/v1.0.0/app-release.apk) *(Reemplaza con tu enlace de release)*
-* 💻 **Repositorio del Proyecto:** [https://github.com/TU_USUARIO/TU_REPOSITORIO](https://github.com/TU_USUARIO/TU_REPOSITORIO)
+* 📦 **Descargar la APK (Instalador para Android):** [¡Descarga el APK aquí!](https://github.com/juankbza/apipokemon/releases/download/v1.0.0/app-release.apk)
+* 💻 **Repositorio del Proyecto:** [https://github.com/juankbza/apipokemon.git](https://github.com/juankbza/apipokemon.git)
 
 ---
 
