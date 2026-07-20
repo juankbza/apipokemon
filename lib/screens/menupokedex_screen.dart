@@ -113,7 +113,7 @@ class _MenupokedexScreenState extends State<MenupokedexScreen> {
 
 
               SizedBox(
-                height: 350, 
+                height: 450, 
                 child: pokemonData.isEmpty
                     ? const Center(child: CircularProgressIndicator(color: Colors.white))
                     : ListView.builder(
@@ -167,7 +167,7 @@ class _MenupokedexScreenState extends State<MenupokedexScreen> {
                                   const SizedBox(height: 10),
                                   Expanded(
                                     child: Padding(
-                                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                                      padding: const EdgeInsets.symmetric(horizontal: 1),
                                       child: FadeInImage(
                                         placeholder: const AssetImage('assets/images/charizard.png'), 
                                         image: NetworkImage('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png'),
