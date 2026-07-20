@@ -1,341 +1,174 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:pokemania/themes/app_themes.dart';
+import 'package:pokemania/screens/story_screen.dart';
+import 'package:pokemania/providers/audio_provider.dart';
 
 class IntroScreen extends StatefulWidget {
   const IntroScreen({super.key});
 
   @override
-  State<IntroScreen> createState() => _InfoScreenState();
+  State<IntroScreen> createState() => _IntroScreenState();
 }
 
-class _InfoScreenState extends State<IntroScreen> {
+class _IntroScreenState extends State<IntroScreen> {
+  
+  double gameBoyOpacity = 0.0;
+  double gameBoyScale = 1.0;
+  double phoneWhiteFlash = 0.0;
+  bool mostrarImagenParpadeante = true;
+  
+  
+  Timer? _timerParpadeo;
 
-  int indice = 0;
+  @override
+  void initState() {
+    super.initState();
+
+    Provider.of<AudioProvider>(context, listen: false)
+      .reproducirMusica('audio/titulo.mp3');
+    
+    Future.delayed(const Duration(milliseconds: 500), () {
+      if (mounted) {
+        setState(() {
+          gameBoyOpacity = 1.0;
+        });
+      }
+    });
+
+
+    _timerParpadeo = Timer.periodic(const Duration(milliseconds: 400), (timer) {
+      if (mounted) {
+        setState(() {
+          mostrarImagenParpadeante = !mostrarImagenParpadeante;
+        });
+      }
+    });
+  }
+
+
+  @override
+  void dispose() {
+    _timerParpadeo?.cancel();
+    super.dispose();
+  }
+
+
+  void accionPresionarStart() {
+    _timerParpadeo?.cancel(); 
+
+    setState(() {
+      mostrarImagenParpadeante = false; 
+      gameBoyScale = 15.0;    
+      phoneWhiteFlash = 1.0;  
+    });
+
+
+    Future.delayed(const Duration(seconds: 2), () {
+      if (mounted) {
+        
+        Navigator.of(context).pushReplacement(
+          PageRouteBuilder(
+            
+            pageBuilder: (context, animation, secondaryAnimation) => const StoryScreen(),
+            
+            
+            transitionDuration: const Duration(milliseconds: 1500), 
+            
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              
+              return Container(
+                color: Colors.white,
+                
+                child: FadeTransition(
+                  opacity: animation,
+                  child: child,
+                ),
+              );
+            },
+          ),
+        );
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppThemes.lightTheme.colorScheme.primary,
+      body: Stack(
+        children: [
 
-      body: PageView(
+          Center(
+            child: AnimatedOpacity(
+              opacity: gameBoyOpacity,
+              duration: const Duration(seconds: 2),
+              curve: Curves.easeIn,
+              child: AnimatedScale(
+                scale: gameBoyScale,
+                duration: const Duration(seconds: 2),
+                curve: Curves.easeInOutExpo,
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    
+                    Image.asset(
+                      'assets/images/gameboy.png', 
+                      width: 320,
+                      fit: BoxFit.contain,
+                    ),
 
-        controller: PageController(),
-        onPageChanged: (index) {
-          setState(() {
-            indice = index;
-          });
+                    Positioned(
+                      top: 141,
+                      left: 113,
+                      child: AnimatedOpacity(
+                        opacity: mostrarImagenParpadeante ? 1.0 : 0.0,
 
-        },
+                        duration: const Duration(milliseconds: 200), 
+                        child: Image.asset(
+                          'assets/images/start.png', 
+                          width: 104,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
 
-        children: const [
-          Intro1(),
-          Intro2(),
-          Intro3(),
-          Intro4(),
+
+                    Positioned(
+                      bottom: 80, 
+                      left: 150,   
+                      child: GestureDetector(
+                        onTap: accionPresionarStart,
+                        child: Container(
+                          width: 45,
+                          height: 40,
+                          color: const Color.fromARGB(0, 0, 0, 0),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+
+
+          IgnorePointer(
+            ignoring: phoneWhiteFlash < 1.0, 
+            child: AnimatedOpacity(
+              opacity: phoneWhiteFlash,
+              duration: const Duration(seconds: 2),
+              curve: Curves.easeIn,
+              child: Container(
+                color: Colors.white,
+                width: double.infinity,
+                height: double.infinity,
+              ),
+            ),
+          ),
         ],
       ),
-
-
-    );
-  }
-}
-
-
-class Intro1 extends StatefulWidget {
-  const Intro1({super.key});
-
-  @override
-  State<Intro1> createState() => _Intro1State();
-}
-
-class _Intro1State extends State<Intro1> {
-  @override
-  Widget build(BuildContext context) {
-    return  Scaffold(
-      body: Container(
-
-        width: double.infinity,
-        height: double.infinity,
-        //color: Colors.red,
-
-        decoration: BoxDecoration(
-
-          image: DecorationImage(
-            
-            image: AssetImage('assets/oak1.jpg'),
-            fit: BoxFit.fitHeight
-            
-            )
-
-        ),
-
-        child: Stack(
-
-          children: [
-
-            Container(
-
-              width: double.infinity,
-              height: 200,
-              color: AppThemes.lightTheme.colorScheme.onPrimary,
-              margin: EdgeInsets.only(top: 630,left: 35,right: 35),
-
-              child: Stack(
-                
-                children: [
-
-                  Container(
-
-                    alignment: Alignment.center,
-
-                    
-
-                    child: Text(
-                      
-                      '¡Hola a todos! ¡Bienvenidos al mundo de los Pokémon! Mi nombre es Oak, ¡pero la gente me llama el Profesor Pokémon! Me alegra ver que estás aquí. Con esta nueva aplicación, tendrás el mapa definitivo para explorar, analizar y conocer absolutamente todo sobre tus Pokémon favoritos.',
-                      style: TextStyle(
-
-                        color: AppThemes.lightTheme.colorScheme.tertiary,
-                        fontSize: 17,
-                      ),
-                      
-                      ),
-                  )
-                ],
-
-              ),
-            )
-          ],
-        ),
-
-      )
-    );
-  }
-}
-
-class Intro2 extends StatelessWidget {
-  const Intro2({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return  Scaffold(
-      body: Container(
-
-        width: double.infinity,
-        height: double.infinity,
-        //color: Colors.red,
-
-        decoration: BoxDecoration(
-
-          image: DecorationImage(
-            
-            image: AssetImage('assets/oak1.jpg'),
-            fit: BoxFit.fitHeight
-            
-            )
-
-        ),
-
-        child: Stack(
-
-          children: [
-
-            Container(
-
-              width: double.infinity,
-              height: 200,
-              color: AppThemes.lightTheme.colorScheme.onPrimary,
-              margin: EdgeInsets.only(top: 630,left: 35,right: 35),
-
-              child: Stack(
-                
-                children: [
-
-                  Container(
-
-                    alignment: Alignment.center,
-
-                    
-
-                    child: Text(
-                      
-                      '¡Hola a todos! ¡Bienvenidos al mundo de los Pokémon! Mi nombre es Oak, ¡pero la gente me llama el Profesor Pokémon! Me alegra ver que estás aquí. Con esta nueva aplicación, tendrás el mapa definitivo para explorar, analizar y conocer absolutamente todo sobre tus Pokémon favoritos.',
-                      style: TextStyle(
-
-                        color: AppThemes.lightTheme.colorScheme.tertiary,
-                        fontSize: 17,
-                      ),
-                      
-                      ),
-                  )
-                ],
-
-              ),
-            )
-          ],
-        ),
-
-      )
-    );
-  }
-}
-
-class Intro3 extends StatelessWidget {
-  const Intro3({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return  Scaffold(
-      body: Container(
-
-        width: double.infinity,
-        height: double.infinity,
-        //color: Colors.red,
-
-        decoration: BoxDecoration(
-
-          image: DecorationImage(
-            
-            image: AssetImage('assets/oak1.jpg'),
-            fit: BoxFit.fitHeight
-            
-            )
-
-        ),
-
-        child: Stack(
-
-          children: [
-
-            Container(
-
-              width: double.infinity,
-              height: 200,
-              color: AppThemes.lightTheme.colorScheme.onPrimary,
-              margin: EdgeInsets.only(top: 630,left: 35,right: 35),
-
-              child: Stack(
-                
-                children: [
-
-                  Container(
-
-                    alignment: Alignment.center,
-
-                    
-
-                    child: Text(
-                      
-                      '¡Hola a todos! ¡Bienvenidos al mundo de los Pokémon! Mi nombre es Oak, ¡pero la gente me llama el Profesor Pokémon! Me alegra ver que estás aquí. Con esta nueva aplicación, tendrás el mapa definitivo para explorar, analizar y conocer absolutamente todo sobre tus Pokémon favoritos.',
-                      style: TextStyle(
-
-                        color: AppThemes.lightTheme.colorScheme.tertiary,
-                        fontSize: 17,
-                      ),
-                      
-                      ),
-                  )
-                ],
-
-              ),
-            )
-          ],
-        ),
-
-      )
-    );
-  }
-}
-
-class Intro4 extends StatelessWidget {
-  const Intro4({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return  Scaffold(
-      body: Container(
-
-        width: double.infinity,
-        height: double.infinity,
-        //color: Colors.red,
-
-        decoration: BoxDecoration(
-
-          image: DecorationImage(
-            
-            image: AssetImage('assets/oak1.jpg'),
-            fit: BoxFit.fitHeight
-            
-            )
-
-        ),
-
-        child: Stack(
-
-          children: [
-
-            Container(
-
-              width: double.infinity,
-              height: 200,
-              color: AppThemes.lightTheme.colorScheme.onPrimary,
-              margin: EdgeInsets.only(top: 630,left: 35,right: 35),
-
-              child: Stack(
-                
-                children: [
-
-                  Container(
-
-                    alignment: Alignment.center,
-
-                    
-
-                    child: Text(
-                      
-                      '¡Hola a todos! ¡Bienvenidos al mundo de los Pokémon! Mi nombre es Oak, ¡pero la gente me llama el Profesor Pokémon! Me alegra ver que estás aquí. Con esta nueva aplicación, tendrás el mapa definitivo para explorar, analizar y conocer absolutamente todo sobre tus Pokémon favoritos.',
-                      style: TextStyle(
-
-                        color: AppThemes.lightTheme.colorScheme.tertiary,
-                        fontSize: 17,
-                      ),
-                      
-                      ),
-
-  
-                  ),
-
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: AppThemes.lightTheme.colorScheme.secondary,
-                      foregroundColor: AppThemes.lightTheme.colorScheme.onPrimary,
-                      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 12),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                    ),
-                    onPressed: () {
-                      // pushReplacementNamed destruye la pantalla de intro para que el usuario no pueda "volver atrás" usando el botón del teléfono
-                      Navigator.pushReplacementNamed(context, '/home'); 
-                    },
-
-                    child: const Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text('Comenzar', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,),textAlign: TextAlign.end,),
-                        SizedBox(width: 8),
-                        Icon(Icons.arrow_forward),
-                      ],
-                    ),
-
-                  )
-                ],
-
-              ),
-            )
-          ],
-        ),
-
-      )
     );
   }
 }

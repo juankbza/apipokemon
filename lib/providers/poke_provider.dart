@@ -1,53 +1,54 @@
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:pokemania/models/infopokemon.dart';
 
 class PokeProvider extends ChangeNotifier {
 
-  //final String _apiKey = ''; no tengo api key no se necesita al parecer
   final String _baseUrl = 'pokeapi.co';
-  //final String _languaje = 'es-ES';
-
   List<Welcome> pokemonData = [];
+  bool isLoading = true;
 
-  PokeProvider(){
-
-    print('iniciando pokeapi');
+  PokeProvider() {
+    debugPrint('Iniciando PokeAPI de forma optimizada...');
     getPokemonData();
   }
 
- Future<String> _getJsonData(String endpoint, [int? page = 1]) async{
-
-  var url = Uri.https(_baseUrl, endpoint, {
-
-   // 'api_key' : _apiKey,
-    //'languaje' : _languaje,
-    //'page' : '$page' 
-
-  });
-
-  final response = await http.get(url);
-  print(response.body);
-  return response.body;
-
- } 
+  Future<String> _getJsonData(String endpoint) async {
+    var url = Uri.https(_baseUrl, endpoint);
+    final response = await http.get(url);
+    return response.body;
+  } 
 
   void getPokemonData() async {
+    if (pokemonData.isNotEmpty) return;
 
-    print('prueba pokemon data');
+    try {
+      isLoading = true;
+      notifyListeners();
 
-    final jsonData = await _getJsonData('/api/v2/pokemon/5');
-    final pokemonDataResponse = Welcome.fromJson(jsonData);
-    //pokemonData = pokemonDataResponse.sprites ;
-    print(pokemonDataResponse.id);
-    print(pokemonDataResponse.name);  
-    print(pokemonDataResponse.abilities);
-    print(pokemonDataResponse.types);
-    
+      final listaDeFuturos = List.generate(
+        20, 
+        (index) => _getJsonData('/api/v2/pokemon/${index + 1}')
+      );
 
-    notifyListeners();
+      final respuestasJson = await Future.wait(listaDeFuturos);
+      
+      List<Welcome> listaTemporal = [];
+      for (var datos in respuestasJson) {
+        final pokemonDataResponse = Welcome.fromJson(datos);
+        listaTemporal.add(pokemonDataResponse);
+      }
 
+
+      listaTemporal.sort((a, b) => a.id.compareTo(b.id));
+      
+      pokemonData = listaTemporal;
+
+    } catch (e) {
+      debugPrint('Error grave de sobrecarga en la PokeAPI: $e');
+    } finally {
+      isLoading = false;
+      notifyListeners();
+    }
   }
 }
-

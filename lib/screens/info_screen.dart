@@ -52,7 +52,7 @@ class InfoScreen extends StatelessWidget {
                     
                     image: const DecorationImage(
                       image: AssetImage(
-                        'assets/profesor_oak.png',
+                        'assets/images/profesor_oak.png',
                       ),
                       fit: BoxFit.cover,
                     ),
@@ -69,7 +69,7 @@ class InfoScreen extends StatelessWidget {
                             color: Colors.white.withValues(
                               alpha: 0.85,
                             ), 
-                            borderRadius: BorderRadius.circular(8),
+                            
                             border: Border.all(
                               color: Colors.black,
                               width: 2,
@@ -120,7 +120,6 @@ class InfoScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     children: [
                       
-                      // TARJETA 1: JUAN GUEVARA
 
                       SizedBox(
                         width: 280,
@@ -137,13 +136,13 @@ class InfoScreen extends StatelessWidget {
                                     decoration: BoxDecoration(
 
                                       image: const DecorationImage(
-                                        image: AssetImage('assets/pokemones.png'),
+                                        image: AssetImage('assets/images/pokemones.png'),
                                         fit: BoxFit.cover,
                                       ),
                                     ),
                                   ),
                                 ),
-                                // Columna de Tags
+                                
                                 Column(
                                   children: [
                                     Container(
@@ -194,7 +193,7 @@ class InfoScreen extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            // Descripción de la primera tarjeta
+                            
                             Container(
                               width: double.infinity,
                               margin: const EdgeInsets.only(top: 15),
@@ -218,7 +217,7 @@ class InfoScreen extends StatelessWidget {
 
                       const SizedBox(width: 20),
 
-                      // TARJETA 2: ANYER VILLARROEL
+
 
                       SizedBox(
                         width: 280,
@@ -235,13 +234,13 @@ class InfoScreen extends StatelessWidget {
                                     decoration: BoxDecoration(
 
                                       image: const DecorationImage(
-                                        image: AssetImage('assets/poke1.png'),
+                                        image: AssetImage('assets/images/poke1.png'),
                                         fit: BoxFit.cover,
                                       ),
                                     ),
                                   ),
                                 ),
-                                // Columna de Tags
+                                
                                 Column(
                                   children: [
                                     Container(
@@ -292,7 +291,7 @@ class InfoScreen extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            // Descripción de la segunda tarjeta
+                            
                             Container(
                               width: double.infinity,
                               margin: const EdgeInsets.only(top: 15),

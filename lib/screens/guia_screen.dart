@@ -41,12 +41,11 @@ class GuiaScreen extends StatelessWidget {
           
               width: double.infinity,
               height: 270,
-              //color: AppThemes.lightTheme.colorScheme.secondary,
               margin: const EdgeInsets.only(top: 20, left: 30, right: 30),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 image: const DecorationImage(
-                  image: AssetImage('assets/pokemones.png'),
+                  image: AssetImage('assets/images/pokemones.png'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -79,7 +78,6 @@ class GuiaScreen extends StatelessWidget {
                   
                       color: AppThemes.lightTheme.colorScheme.tertiary,
                       fontSize: 15,
-                      //fontWeight: GoogleFonts.pixelifySans().fontWeight,
                       
                     ),
                   
@@ -93,15 +91,13 @@ class GuiaScreen extends StatelessWidget {
           
               width: double.infinity,
               height: 270,
-              //color: AppThemes.lightTheme.colorScheme.secondary,
               margin: const EdgeInsets.only(top: 10, left: 30, right: 30),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 image: const DecorationImage(
-                  image: AssetImage('assets/poke1.png'),
+                  image: AssetImage('assets/images/poke1.png'),
                   fit: BoxFit.cover,
                 ),
-                //color: AppThemes.lightTheme.colorScheme.secondary,
               ),
             ),
           
@@ -132,7 +128,6 @@ class GuiaScreen extends StatelessWidget {
                   
                       color: AppThemes.lightTheme.colorScheme.tertiary,
                       fontSize: 15,
-                      //fontWeight: GoogleFonts.pixelifySans().fontWeight,
                       
                     ),
                   
@@ -147,12 +142,12 @@ class GuiaScreen extends StatelessWidget {
           
               width: double.infinity,
               height: 270,
-              //color: AppThemes.lightTheme.colorScheme.secondary,
+              
               margin: const EdgeInsets.only(top: 10, left: 30, right: 30),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 image: const DecorationImage(
-                  image: AssetImage('assets/pelea.png'),
+                  image: AssetImage('assets/images/pelea.png'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -186,7 +181,6 @@ class GuiaScreen extends StatelessWidget {
                   
                       color: AppThemes.lightTheme.colorScheme.tertiary,
                       fontSize: 15,
-                      //fontWeight: GoogleFonts.pixelifySans().fontWeight,
                       
                     ),
                   

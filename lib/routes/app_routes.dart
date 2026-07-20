@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pokemania/screens/intro_screen.dart';
 import 'package:pokemania/screens/screens.dart';
 import 'package:pokemania/themes/app_themes.dart';
 import 'package:pokemania/widgets/widgets.dart';
@@ -14,10 +13,10 @@ class AppRoutes {
     '/info' : (BuildContext context) => InfoScreen(),
     '/home' : (BuildContext context) => HomeScreen(),
     '/guia' : (BuildContext context) => GuiaScreen(),
-    '/pokedex' : (BuildContext context) => PokedexScreen(),
+    '/pokedex' : (BuildContext context) => PokedexScreen(pokemonId: '1'),
     '/story' : (BuildContext context) => StoryScreen(),
     '/menupokedex' : (BuildContext context) => MenupokedexScreen(),
-    '/intro' : (BuildContext Context) => IntroScreen()
+    '/intro' : (BuildContext context) => IntroScreen()
     
 
 

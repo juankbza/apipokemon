@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pokemania/providers/poke_provider.dart';
 import 'package:pokemania/routes/app_routes.dart';
-import 'package:provider/provider.dart';  
+import 'package:pokemania/providers/audio_provider.dart';
+import 'package:provider/provider.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -16,21 +16,31 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
   @override
+    void initState() {
+    super.initState();
+
+    Provider.of<AudioProvider>(context, listen: false).reproducirCola([
+      'audio/audiofondo.mp3',
+      'audio/audiofondo2.mp3',
+      'audio/musica3.mp3',
+    ]);
+  }
+
+  @override
   Widget build(BuildContext context) {
 
 
-    //final pokeProvider = Provider.of<PokeProvider>(context);
     return Scaffold(
       body: Container(
 
         width: double.infinity,
         height: double.infinity,
-        //color: AppThemes.lightTheme.colorScheme.primary,
+        
 
         decoration: BoxDecoration(
           
           image: DecorationImage(
-            image: AssetImage('assets/prueba2.png'),
+            image: AssetImage('assets/images/prueba2.png'),
             fit: BoxFit.cover,
 
           
@@ -48,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
               
               width: 200,
               height: 250,
-              ///color: Colors.red,
+              
               margin: EdgeInsets.only(top: 300,left: 110, right: 30),
               child: ListView.builder(
                 
