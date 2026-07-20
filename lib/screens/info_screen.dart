@@ -136,7 +136,7 @@ class InfoScreen extends StatelessWidget {
                                     decoration: BoxDecoration(
 
                                       image: const DecorationImage(
-                                        image: AssetImage('assets/images/pokemones.png'),
+                                        image: AssetImage('assets/images/juan.jpeg'),
                                         fit: BoxFit.cover,
                                       ),
                                     ),
@@ -234,7 +234,7 @@ class InfoScreen extends StatelessWidget {
                                     decoration: BoxDecoration(
 
                                       image: const DecorationImage(
-                                        image: AssetImage('assets/images/poke1.png'),
+                                        image: AssetImage('assets/images/anyer.jpeg'),
                                         fit: BoxFit.cover,
                                       ),
                                     ),
